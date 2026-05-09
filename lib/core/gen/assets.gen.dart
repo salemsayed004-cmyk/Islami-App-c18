@@ -42,15 +42,39 @@ class $AssetsImagesGen {
   /// File path: assets/images/Glow.png
   AssetGenImage get glow => const AssetGenImage('assets/images/Glow.png');
 
+  /// File path: assets/images/HadethBackground.png
+  AssetGenImage get hadethBackground =>
+      const AssetGenImage('assets/images/HadethBackground.png');
+
   /// File path: assets/images/Mosque-01 1.png
   AssetGenImage get mosque011 =>
       const AssetGenImage('assets/images/Mosque-01 1.png');
+
+  /// File path: assets/images/QuranBackground.png
+  AssetGenImage get quranBackground =>
+      const AssetGenImage('assets/images/QuranBackground.png');
+
+  /// File path: assets/images/RadioBackground.png
+  AssetGenImage get radioBackground =>
+      const AssetGenImage('assets/images/RadioBackground.png');
+
+  /// File path: assets/images/SebhaBackground.png
+  AssetGenImage get sebhaBackground =>
+      const AssetGenImage('assets/images/SebhaBackground.png');
 
   /// File path: assets/images/Shape-l.png
   AssetGenImage get shapeL => const AssetGenImage('assets/images/Shape-l.png');
 
   /// File path: assets/images/Shape-r.png
   AssetGenImage get shapeR => const AssetGenImage('assets/images/Shape-r.png');
+
+  /// File path: assets/images/TimeBackground.png
+  AssetGenImage get timeBackground =>
+      const AssetGenImage('assets/images/TimeBackground.png');
+
+  /// File path: assets/images/img_header.png
+  AssetGenImage get imgHeader =>
+      const AssetGenImage('assets/images/img_header.png');
 
   /// File path: assets/images/islami logo.png
   AssetGenImage get islamiLogo =>
@@ -71,9 +95,15 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     glow,
+    hadethBackground,
     mosque011,
+    quranBackground,
+    radioBackground,
+    sebhaBackground,
     shapeL,
     shapeR,
+    timeBackground,
+    imgHeader,
     islamiLogo,
     islamiLogo2,
     routeLogo,
