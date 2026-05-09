@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:islami/modules/splash/pages/first_splash_view.dart';
+
+import '../../modules/layout/home_layout.dart';
+import '../../modules/splash/pages/splash_view.dart';
+
+
+
+abstract class AppRoutes {
+  static Map<String, WidgetBuilder> routes={
+
+    FirstSplashView.routeName:(context)=>FirstSplashView(),
+    SplashView.routeName:(context)=>SplashView(),
+    HomeLayout.routeName:(context)=>HomeLayout(),
+  };
+
+  }
