@@ -18,5 +18,31 @@ abstract class ThemeManager {
         color: AppColors.white,
       ),
     ),
+    textTheme: TextTheme(
+      headlineSmall: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.black,
+        fontSize: 24,
+        fontWeight: FontWeight.w700,
+      ),
+      titleMedium: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.titleTextColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyLarge: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.titleTextColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyMedium: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+      ),
+    ),
   );
 }

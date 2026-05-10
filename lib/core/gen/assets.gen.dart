@@ -76,6 +76,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgHeader =>
       const AssetGenImage('assets/images/img_header.png');
 
+  /// File path: assets/images/img_most_recent.png
+  AssetGenImage get imgMostRecent =>
+      const AssetGenImage('assets/images/img_most_recent.png');
+
   /// File path: assets/images/islami logo.png
   AssetGenImage get islamiLogo =>
       const AssetGenImage('assets/images/islami logo.png');
@@ -104,6 +108,7 @@ class $AssetsImagesGen {
     shapeR,
     timeBackground,
     imgHeader,
+    imgMostRecent,
     islamiLogo,
     islamiLogo2,
     routeLogo,
