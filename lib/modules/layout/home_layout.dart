@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/modules/layout/quran/quran_details_view.dart';
 import 'package:islami/modules/layout/quran/quran_view.dart';
 import 'package:islami/modules/layout/radio/radio_view.dart';
 import 'package:islami/modules/layout/tasbeh/tasbeh_view.dart';
@@ -24,6 +25,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     TasbehView(),
     RadioView(),
     TimeView(),
+
   ];
   @override
   Widget build(BuildContext context) {

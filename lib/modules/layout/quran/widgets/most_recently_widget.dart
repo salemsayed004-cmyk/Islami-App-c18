@@ -13,41 +13,47 @@ class MostRecentlyWidget extends StatelessWidget {
       spacing: 10,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Most Recently", style: theme.textTheme.titleMedium),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Text("Most Recently", style: theme.textTheme.titleMedium),
+        ),
         SizedBox(
           height: 150,
-          child: ListView.separated(
-            itemBuilder: (context, index) {
-              return Container(
-                height: 145,
-                width: MediaQuery.of(context).size.width * 0.8,
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: AppColors.gold,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return Container(
+                  height: 145,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppColors.gold,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                      children: [
-                        Text("Al-Anbiya", style: theme.textTheme.headlineSmall),
-                        Text("الأنبياء", style: theme.textTheme.headlineSmall),
-                        Text("112 Verses", style: theme.textTheme.bodyMedium),
-                      ],
-                    ),
-                    Assets.images.imgMostRecent.image(),
-                  ],
-                ),
-              );
-            },
-            separatorBuilder: (context, index) {
-              return SizedBox(width: 10);
-            },
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
+                        children: [
+                          Text("Al-Anbiya", style: theme.textTheme.headlineSmall),
+                          Text("الأنبياء", style: theme.textTheme.headlineSmall),
+                          Text("112 Verses", style: theme.textTheme.bodyMedium),
+                        ],
+                      ),
+                      Assets.images.imgMostRecent.image(),
+                    ],
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return SizedBox(width: 10);
+              },
+              itemCount: 5,
+              scrollDirection: Axis.horizontal,
+            ),
           ),
         ),
       ],

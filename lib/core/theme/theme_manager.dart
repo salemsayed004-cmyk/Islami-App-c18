@@ -6,6 +6,16 @@ abstract class ThemeManager {
   static ThemeData lightTheme() => ThemeData(
     scaffoldBackgroundColor: AppColors.black,
     primaryColor: AppColors.gold,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      iconTheme: IconThemeData(color: AppColors.gold),
+      titleTextStyle: TextStyle(
+        fontWeight: FontWeight.w700,
+        fontSize: 20,
+        color: AppColors.gold,
+      ),
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       backgroundColor: AppColors.gold,
@@ -25,12 +35,19 @@ abstract class ThemeManager {
         fontSize: 24,
         fontWeight: FontWeight.w700,
       ),
+      titleLarge: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.titleTextColor,
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+      ),
       titleMedium: TextStyle(
         fontFamily: "Janna",
         color: AppColors.titleTextColor,
         fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
+
       bodyLarge: TextStyle(
         fontFamily: "Janna",
         color: AppColors.titleTextColor,

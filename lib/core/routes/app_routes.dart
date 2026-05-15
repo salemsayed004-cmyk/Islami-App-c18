@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/modules/layout/quran/quran_details_view.dart';
 import 'package:islami/modules/splash/pages/first_splash_view.dart';
 
 import '../../modules/layout/home_layout.dart';
@@ -12,6 +13,7 @@ abstract class AppRoutes {
     FirstSplashView.routeName:(context)=>FirstSplashView(),
     SplashView.routeName:(context)=>SplashView(),
     HomeLayout.routeName:(context)=>HomeLayout(),
+    QuranDetailsView.routeName:(context)=>QuranDetailsView(),
   };
 
   }
