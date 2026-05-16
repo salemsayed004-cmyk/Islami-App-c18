@@ -7,16 +7,18 @@ import '../../../../core/theme/app_colors.dart';
 
 class SuraItem extends StatelessWidget {
   final SuraData surData;
-  const  SuraItem({super.key, required this.surData});
-
+  const SuraItem({super.key, required this.surData});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, QuranDetailsView.routeName);
-
+        Navigator.pushNamed(
+          context,
+          QuranDetailsView.routeName,
+          arguments: surData,
+        );
       },
       child: Row(
         children: [
@@ -53,9 +55,7 @@ class SuraItem extends StatelessWidget {
           Spacer(),
           Text(
             surData.nameAr,
-            style: theme.textTheme.titleLarge!.copyWith(
-              color: AppColors.white,
-            ),
+            style: theme.textTheme.titleLarge!.copyWith(color: AppColors.white),
           ),
         ],
       ),

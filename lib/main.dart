@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/theme/theme_manager.dart';
 import 'package:islami/modules/layout/home_layout.dart';
-import 'package:islami/modules/layout/quran/quran_details_view.dart';
-
 import 'core/routes/app_routes.dart';
 
 void main() {
@@ -17,10 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeManager.lightTheme(),
-      initialRoute:HomeLayout.routeName,
-    routes: AppRoutes.routes,
+      initialRoute: HomeLayout.routeName,
+      routes: AppRoutes.routes,
       debugShowCheckedModeBanner: false,
     );
   }
 }
-

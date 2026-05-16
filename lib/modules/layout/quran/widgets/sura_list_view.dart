@@ -3,8 +3,6 @@ import 'package:islami/core/theme/app_colors.dart';
 import 'package:islami/model/sura_data.dart';
 import 'package:islami/modules/layout/quran/widgets/sura_item.dart';
 
-import '../../../../core/gen/assets.gen.dart';
-import '../../../../model/sura_data.dart';
 
 class SuraListView extends StatefulWidget {
   const SuraListView({super.key});
