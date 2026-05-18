@@ -536,6 +536,9 @@ class $AssetsImagesGen {
   AssetGenImage get timeBackground =>
       const AssetGenImage('assets/images/TimeBackground.png');
 
+  /// File path: assets/images/doaa.png
+  AssetGenImage get doaa => const AssetGenImage('assets/images/doaa.png');
+
   /// File path: assets/images/img_bottom_decoration.png
   AssetGenImage get imgBottomDecoration =>
       const AssetGenImage('assets/images/img_bottom_decoration.png');
@@ -564,6 +567,16 @@ class $AssetsImagesGen {
   AssetGenImage get islamiLogo2 =>
       const AssetGenImage('assets/images/islami_logo2.png');
 
+  /// File path: assets/images/masged.png
+  AssetGenImage get masged => const AssetGenImage('assets/images/masged.png');
+
+  /// File path: assets/images/mic.png
+  AssetGenImage get mic => const AssetGenImage('assets/images/mic.png');
+
+  /// File path: assets/images/moshafimg.png
+  AssetGenImage get moshafimg =>
+      const AssetGenImage('assets/images/moshafimg.png');
+
   /// File path: assets/images/number_frame.png
   AssetGenImage get numberFrame =>
       const AssetGenImage('assets/images/number_frame.png');
@@ -576,6 +589,9 @@ class $AssetsImagesGen {
   AssetGenImage get splashBackground =>
       const AssetGenImage('assets/images/splashBackground.png');
 
+  /// File path: assets/images/welcome.png
+  AssetGenImage get welcome => const AssetGenImage('assets/images/welcome.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     glow,
@@ -587,6 +603,7 @@ class $AssetsImagesGen {
     shapeL,
     shapeR,
     timeBackground,
+    doaa,
     imgBottomDecoration,
     imgHeader,
     imgLeftCorner,
@@ -594,9 +611,13 @@ class $AssetsImagesGen {
     imgRightCorner,
     islamiLogo,
     islamiLogo2,
+    masged,
+    mic,
+    moshafimg,
     numberFrame,
     routeLogo,
     splashBackground,
+    welcome,
   ];
 }
 
