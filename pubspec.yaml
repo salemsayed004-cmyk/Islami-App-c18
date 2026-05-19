@@ -38,6 +38,7 @@ dependencies:
   flutter_svg:
   smooth_page_indicator: ^2.0.1
   shared_preferences: ^2.5.5
+  carousel_slider: ^5.1.2
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +77,8 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/files/
+    - assets/files/quran/
+    - assets/files/hadith/
 
 
 
