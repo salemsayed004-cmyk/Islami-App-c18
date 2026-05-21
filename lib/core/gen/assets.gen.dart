@@ -135,6 +135,14 @@ class $AssetsImagesGen {
   AssetGenImage get routeLogo =>
       const AssetGenImage('assets/images/route logo.png');
 
+  /// File path: assets/images/sebhabody.png
+  AssetGenImage get sebhabody =>
+      const AssetGenImage('assets/images/sebhabody.png');
+
+  /// File path: assets/images/sebhahead.png
+  AssetGenImage get sebhahead =>
+      const AssetGenImage('assets/images/sebhahead.png');
+
   /// File path: assets/images/splashBackground.png
   AssetGenImage get splashBackground =>
       const AssetGenImage('assets/images/splashBackground.png');
@@ -167,6 +175,8 @@ class $AssetsImagesGen {
     moshafimg,
     numberFrame,
     routeLogo,
+    sebhabody,
+    sebhahead,
     splashBackground,
     welcome,
   ];

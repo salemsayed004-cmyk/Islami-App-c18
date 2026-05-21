@@ -28,7 +28,14 @@ abstract class ThemeManager {
         color: AppColors.white,
       ),
     ),
+
     textTheme: TextTheme(
+      displaySmall: TextStyle(
+        fontFamily: "Janna",
+        color: AppColors.white,
+        fontSize: 26,
+        fontWeight: FontWeight.w700,
+      ),
       headlineSmall: TextStyle(
         fontFamily: "Janna",
         color: AppColors.black,
