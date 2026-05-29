@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/modules/layout/quran/quran_view.dart';
 import 'package:islami/modules/layout/radio/radio_view.dart';
 import 'package:islami/modules/layout/tasbeh/tasbeh_view.dart';
 import 'package:islami/modules/layout/time/time_view.dart';
+import 'package:islami/modules/layout/time/cubit/prayer_time_cubit.dart';
 
 import '../../core/gen/assets.gen.dart';
 import '../../core/theme/app_colors.dart';
@@ -18,16 +20,20 @@ class HomeLayout extends StatefulWidget {
 
 class _HomeLayoutState extends State<HomeLayout> {
   int _selectedIndex = 0;
-  List<Widget> screens = [
-    QuranView(),
-    HadithView(),
-    TasbehView(),
-    RadioView(),
-    TimeView(),
 
-  ];
   @override
   Widget build(BuildContext context) {
+    final List<Widget> screens = [
+      const QuranView(),
+      const HadithView(),
+      const TasbehView(),
+      const RadioView(),
+      BlocProvider(
+        create: (context) => PrayerTimeCubit(),
+        child: const TimeView(),
+      ),
+    ];
+
     return Scaffold(
       body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -37,12 +43,11 @@ class _HomeLayoutState extends State<HomeLayout> {
             _selectedIndex = index;
           });
         },
-
         items: [
           BottomNavigationBarItem(
             icon: Assets.icons.icQuran.svg(width: 22, height: 22),
             activeIcon: Container(
-              padding: EdgeInsets.symmetric(vertical: 6, horizontal: 22),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 22),
               decoration: BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.circular(40),
@@ -50,7 +55,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               child: Assets.icons.icQuran.svg(
                 width: 22,
                 height: 22,
-                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             label: "Quran",
@@ -58,7 +63,7 @@ class _HomeLayoutState extends State<HomeLayout> {
           BottomNavigationBarItem(
             icon: Assets.icons.icHadeth.svg(width: 22, height: 22),
             activeIcon: Container(
-              padding: EdgeInsets.symmetric(vertical: 6, horizontal: 22),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 22),
               decoration: BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.circular(40),
@@ -66,7 +71,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               child: Assets.icons.icHadeth.svg(
                 width: 22,
                 height: 22,
-                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             label: "Hadeth",
@@ -74,16 +79,15 @@ class _HomeLayoutState extends State<HomeLayout> {
           BottomNavigationBarItem(
             icon: Assets.icons.icSebha.svg(width: 22, height: 22),
             activeIcon: Container(
-              padding: EdgeInsets.symmetric(vertical: 6, horizontal: 22),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 22),
               decoration: BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.circular(40),
               ),
-
               child: Assets.icons.icSebha.svg(
                 width: 22,
                 height: 22,
-                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             label: "Tasbih",
@@ -91,7 +95,7 @@ class _HomeLayoutState extends State<HomeLayout> {
           BottomNavigationBarItem(
             icon: Assets.icons.icRadio.svg(width: 22, height: 22),
             activeIcon: Container(
-              padding: EdgeInsets.symmetric(vertical: 6, horizontal: 22),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 22),
               decoration: BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.circular(40),
@@ -99,7 +103,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               child: Assets.icons.icRadio.svg(
                 width: 22,
                 height: 22,
-                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             label: "Radio",
@@ -107,7 +111,7 @@ class _HomeLayoutState extends State<HomeLayout> {
           BottomNavigationBarItem(
             icon: Assets.icons.icTime.svg(width: 22, height: 22),
             activeIcon: Container(
-              padding: EdgeInsets.symmetric(vertical: 6, horizontal: 22),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 22),
               decoration: BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.circular(40),
@@ -115,7 +119,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               child: Assets.icons.icTime.svg(
                 width: 22,
                 height: 22,
-                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             label: "Time",

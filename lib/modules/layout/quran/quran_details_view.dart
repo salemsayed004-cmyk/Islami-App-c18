@@ -18,7 +18,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)!.settings.arguments as SuraData;
     final ThemeData theme = Theme.of(context);
-    if(verse.isEmpty) readData(args.id);
+    if (verse.isEmpty) readData(args.id);
     return Scaffold(
       appBar: AppBar(title: Text(args.nameEn)),
       body: Column(
@@ -45,13 +45,13 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
               itemCount: verse.length,
               itemBuilder: (context, index) {
                 return Text(
-                  "${[index +1]}${verse[index]}",
+                  "${[index + 1]}${verse[index]}",
                   textAlign: TextAlign.center,
 
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(color: AppColors.gold,height: 1.7),
-
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    color: AppColors.gold,
+                    height: 1.7,
+                  ),
                 );
               },
             ),
@@ -65,9 +65,11 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
   List<String> verse = [];
 
   Future<void> readData(String suraNumber) async {
-    String content = await rootBundle.loadString("assets/files/quran/$suraNumber.txt");
+    String content = await rootBundle.loadString(
+      "assets/files/quran/$suraNumber.txt",
+    );
     setState(() {
-    verse = content.split('\n');
+      verse = content.split('\n');
     });
   }
 }

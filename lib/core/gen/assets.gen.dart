@@ -52,6 +52,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Glow.png
   AssetGenImage get glow => const AssetGenImage('assets/images/Glow.png');
 
+  /// File path: assets/images/Group 35.png
+  AssetGenImage get group35 =>
+      const AssetGenImage('assets/images/Group 35.png');
+
   /// File path: assets/images/HadethBackground.png
   AssetGenImage get hadethBackground =>
       const AssetGenImage('assets/images/HadethBackground.png');
@@ -68,6 +72,10 @@ class $AssetsImagesGen {
   AssetGenImage get radioBackground =>
       const AssetGenImage('assets/images/RadioBackground.png');
 
+  /// File path: assets/images/Rectangle 138.png
+  AssetGenImage get rectangle138 =>
+      const AssetGenImage('assets/images/Rectangle 138.png');
+
   /// File path: assets/images/SebhaBackground.png
   AssetGenImage get sebhaBackground =>
       const AssetGenImage('assets/images/SebhaBackground.png');
@@ -81,6 +89,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/TimeBackground.png
   AssetGenImage get timeBackground =>
       const AssetGenImage('assets/images/TimeBackground.png');
+
+  /// File path: assets/images/bell-icon 1.png
+  AssetGenImage get bellIcon1 =>
+      const AssetGenImage('assets/images/bell-icon 1.png');
+
+  /// File path: assets/images/comment-bubble-icon 1.png
+  AssetGenImage get commentBubbleIcon1 =>
+      const AssetGenImage('assets/images/comment-bubble-icon 1.png');
 
   /// File path: assets/images/doaa.png
   AssetGenImage get doaa => const AssetGenImage('assets/images/doaa.png');
@@ -153,14 +169,18 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     glow,
+    group35,
     hadethBackground,
     mosque011,
     quranBackground,
     radioBackground,
+    rectangle138,
     sebhaBackground,
     shapeL,
     shapeR,
     timeBackground,
+    bellIcon1,
+    commentBubbleIcon1,
     doaa,
     hadithcardbackground1,
     imgBottomDecoration,
